@@ -57,7 +57,7 @@
     display: inline-block;
 }
 
-.header_navegacion li a {
+.header_navegacion-texto {
     display: block;
     color: #fff;
     text-align: center;
@@ -65,9 +65,37 @@
     text-decoration: none;
 }
 
-.header_navegacion li a:hover {
+.header_navegacion-texto:hover {
     border: 2px solid #fff;
     border-radius: 20px;
+}
+
+/* mobile */
+
+@media (max-width: 1024px) {
+    .header {
+        width: 100%;
+        height: 200px;
+        flex-direction: column;    
+        padding-top: 20px;
+    }
+    
+    .header_navegacion-texto, .main_tecnologias-titulo {
+        color: #ffffff;
+        font-size: 18px;
+        font-family: "Montserrat", serif;
+        font-weight: 600;
+        text-decoration: none;
+
+    }
+
+    .header_navegacion ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        padding: 10px;
+        height: max-content;
+    }
 }
 
 /* ESTILOS MAIN */
