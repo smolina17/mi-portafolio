@@ -1,12 +1,11 @@
-/* ESTILOS RESET */
+/* todas las paginas */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* ESTILOS BODY */
-
+/* todas las paginas body */
 .body {
     max-width: 100%;
     background-color: #0E141B;
@@ -27,7 +26,7 @@
     text-decoration: none;
 }
 
-/* ESTILOS HEADER */
+/* todas las paginas encabezado (header) */
 .header {
     width: 100%;
     height: 80px;
@@ -70,7 +69,7 @@
     border-radius: 20px;
 }
 
-/* mobile */
+/* responsive para moviles */
 
 @media (max-width: 1024px) {
     .header {
@@ -98,7 +97,7 @@
     }
 }
 
-/* ESTILOS MAIN */
+/* todas las paginas main */
 .main {
     max-width: 80%;
     margin: 0 auto;
@@ -106,8 +105,49 @@
     flex: 1; /* Ocupa el espacio disponible para empujar el footer hacia abajo */
 }
 
-/* ESTILOS FOOTER */
+/* todas las paginas pie de pagina (footer) */
 footer {
     padding: 20px;
     text-align: center;
+}
+
+/* pagina especifica index */
+
+.main_tecnologias {
+    padding-top: 30px;
+    display: flex;
+    text-align: center;
+}
+
+.main_tecnologias-logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* pagina especifica escritura */
+
+.escrituraFecha {
+    text-align: initial;
+    font-size: 12px;
+}
+
+/* pagina especifica sobre mi */
+
+.sectionSobreMi {
+    padding-top: 30px;
+    display: flex;
+    text-align: center;
+}
+
+.sectionSobreMi p {
+    padding-top: 20px;
+}
+
+.parrafoSobreMi {
+    padding-top: 20px;
+}
+
+.logoSobremi {
+    width: 300px;
+    height: 190px;
 }
