@@ -1,11 +1,9 @@
-/* todas las paginas */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* todas las paginas body */
 .body {
   max-width: 100%;
   background-color: #0E141B;
@@ -18,15 +16,15 @@
   height: 100%;
 }
 
-.header_navegacion-texto, .header_minombre-minombre, .main_tecnologias-titulo {
+.header_navegacion-texto,
+.header_minombre-minombre,
+.main_tecnologias-titulo {
   color: #ffffff;
   font-size: 28px;
   font-family: "Montserrat", serif;
   font-weight: 600;
-  text-decoration: none;
 }
 
-/* todas las paginas encabezado (header) */
 .header {
   width: 100%;
   height: 80px;
@@ -35,12 +33,10 @@
   justify-content: space-between;
   padding: 110px 120px 70px 120px;
 }
-
 .header_minombre {
   display: flex;
   align-items: center;
 }
-
 .header_minombre-logo {
   width: 120px;
   height: 120px;
@@ -51,78 +47,56 @@
   object-position: right;
   animation: scale-up-center 3s 1;
 }
-
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
 .header_navegacion li {
   list-style: none;
   display: inline-block;
 }
-
 .header_navegacion-texto {
   display: block;
-  color: #fff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   animation: scale-up-center 3s 1;
 }
-
 .header_navegacion-texto:hover {
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   border-radius: 20px;
 }
 
-/* todas las paginas main */
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .main {
   max-width: 80%;
   margin: 0 auto;
   padding-top: 35px;
-  flex: 1; /* Ocupa el espacio disponible para empujar el footer hacia abajo */
+  flex: 1;
 }
 
-/* todas las paginas pie de pagina (footer) */
 footer {
   padding: 20px;
   text-align: center;
 }
 
-/* pagina especifica index */
 .main_tecnologias {
   display: flex;
   text-align: center;
 }
-
 .main_tecnologias article {
   flex: 1;
   margin: 10px;
   padding: 15px;
 }
-
 .main_tecnologias-logo {
   width: 50px;
   height: 50px;
 }
 
-/* responsive para moviles */
 @media (max-width: 1024px) {
   .header {
     width: 100%;
@@ -130,12 +104,13 @@ footer {
     flex-direction: column;
     padding-top: 20px;
   }
-  .header_navegacion-texto, .main_tecnologias-titulo {
+  .header_navegacion-texto,
+  .main_tecnologias-titulo {
     color: #ffffff;
-    font-size: 18px;
+    font-size: 28px;
     font-family: "Montserrat", serif;
     font-weight: 600;
-    text-decoration: none;
+    font-size: 18px;
   }
   .header_navegacion ul {
     width: 100%;
@@ -152,28 +127,21 @@ footer {
     padding: 0;
   }
 }
-/* pagina especifica escritura */
 .escrituraFecha {
   text-align: initial;
   font-size: 12px;
 }
 
-/* pagina especifica sobre mi */
 .sectionSobreMi {
   padding-top: 30px;
   display: flex;
   text-align: center;
 }
-
-.sectionSobreMi p {
+.sectionSobreMi p,
+.sectionSobreMi .parrafoSobreMi {
   padding-top: 20px;
 }
-
-.parrafoSobreMi {
-  padding-top: 20px;
-}
-
-.logoSobremi {
+.sectionSobreMi .logoSobremi {
   width: 300px;
   height: 190px;
 }

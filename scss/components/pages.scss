@@ -1,0 +1,72 @@
+// Página específica: Index
+.main_tecnologias {
+    display: flex;
+    text-align: center;
+
+    article {
+        flex: 1;
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    &-logo {
+        width: 50px;
+        height: 50px;
+    }
+}
+    
+// Responsive para móviles
+@media (max-width: 1024px) {
+    .header {
+        width: 100%;
+        height: 200px;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .header_navegacion-texto,
+    .main_tecnologias-titulo {
+        @include text-title;
+        font-size: 18px;
+    }
+
+    .header_navegacion ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        padding: 10px;
+        height: max-content;
+    }
+
+    .main_tecnologias {
+        flex-direction: column;
+    
+        article {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+// Página específica: Escritura
+.escrituraFecha {
+    text-align: initial;
+    font-size: 12px;
+}
+
+// Página específica: Sobre mí
+.sectionSobreMi {
+    padding-top: 30px;
+    display: flex;
+    text-align: center;
+
+    p,
+    .parrafoSobreMi {
+        padding-top: 20px;
+    }
+
+    .logoSobremi {
+        width: 300px;
+        height: 190px;
+    }
+}

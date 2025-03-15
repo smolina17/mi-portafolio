@@ -1,0 +1,113 @@
+// Variables
+$primary-color: #0E141B;
+$text-color: #ffffff;
+$font-family: "Montserrat", serif;
+
+// Mixins para texto
+@mixin text-principal {
+    color: $text-color;
+    font-family: $font-family;
+    font-weight: 500;
+}
+
+@mixin text-title {
+    color: $text-color;
+    font-size: 28px;
+    font-family: $font-family;
+    font-weight: 600;
+}
+
+// Reset de estilos
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Body global
+.body {
+    max-width: 100%;
+    background-color: $primary-color;
+    @include text-principal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+}
+
+// Estilos generales para títulos y enlaces
+.header_navegacion-texto,
+.header_minombre-minombre,
+.main_tecnologias-titulo {
+    @include text-title;
+}
+
+// Header
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 110px 120px 70px 120px;
+
+&_minombre {
+    display: flex;
+    align-items: center;
+
+    &-logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 60%;
+        margin-right: 40px;
+        border: ridge $text-color;
+        object-fit: cover;
+        object-position: right;
+        animation: scale-up-center 3s 1;
+    }
+}
+
+    &_navegacion {
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    &-texto {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        animation: scale-up-center 3s 1;
+
+        &:hover {
+        border: 2px solid $text-color;
+        border-radius: 20px;
+        }
+    }
+    }
+}
+
+// Animaciones
+@keyframes scale-up-center {
+    0% {
+    transform: scale(0.5);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+
+// Main
+.main {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 35px;
+    flex: 1;
+}
+
+// Footer
+footer {
+    padding: 20px;
+    text-align: center;
+}
