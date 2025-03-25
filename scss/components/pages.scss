@@ -56,7 +56,7 @@
 
 // Página específica: Sobre mí
 .sectionSobreMi {
-    padding-top: 30px;
+    padding-top: 0px;
     display: flex;
     text-align: center;
 
@@ -70,3 +70,58 @@
         height: 190px;
     }
 }
+
+// Estilos para la sección de experiencia laboral
+.experiencia {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 0px;
+}
+
+.trabajo {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+
+    h3 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #ccc;
+    }
+
+    ul {
+        padding-left: 20px;
+
+        li {
+            list-style-type: none;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.trabajo-header {
+    gap: 15px; // Espacio entre logo y título
+}
+
+.trabajo-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 60%;
+    border: ridge $text-color;
+    margin-bottom: 5px;
+}
+
+

@@ -74,7 +74,7 @@
 .main {
   max-width: 80%;
   margin: 0 auto;
-  padding-top: 35px;
+  padding-top: 10px;
   flex: 1;
 }
 
@@ -133,7 +133,7 @@ footer {
 }
 
 .sectionSobreMi {
-  padding-top: 30px;
+  padding-top: 0px;
   display: flex;
   text-align: center;
 }
@@ -144,6 +144,53 @@ footer {
 .sectionSobreMi .logoSobremi {
   width: 300px;
   height: 190px;
+}
+
+.experiencia {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 0px;
+}
+
+.trabajo {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.trabajo h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.trabajo p {
+  font-size: 14px;
+  color: #ccc;
+}
+.trabajo ul {
+  padding-left: 20px;
+}
+.trabajo ul li {
+  list-style-type: none;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.trabajo:hover {
+  transform: scale(1.02);
+}
+
+.trabajo-header {
+  gap: 15px;
+}
+
+.trabajo-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 60%;
+  border: ridge #ffffff;
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
