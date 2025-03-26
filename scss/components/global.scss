@@ -1,6 +1,16 @@
-// Variables
+// 🎨 Variables globales
 $primary-color: #0E141B;
 $text-color: #ffffff;
+$secondary-text: #ccc;
+$border-color: rgba(255, 255, 255, 0.2);
+
+// 🎨 Colores de botones
+$btn-primary: #007bff;
+$btn-primary-hover: #0056b3;
+$btn-danger: #dc3545;
+$btn-danger-hover: #b02a37;
+
+// 📌 Tipografía
 $font-family: "Montserrat", serif;
 
 // Mixins para texto
@@ -24,7 +34,7 @@ $font-family: "Montserrat", serif;
     box-sizing: border-box;
 }
 
-// Body global
+// 🌎 Estilos globales
 .body {
     max-width: 100%;
     background-color: $primary-color;
@@ -51,50 +61,50 @@ $font-family: "Montserrat", serif;
     justify-content: space-between;
     padding: 110px 120px 70px 120px;
 
-&_minombre {
-    display: flex;
-    align-items: center;
+    &_minombre {
+        display: flex;
+        align-items: center;
 
-    &-logo {
-        width: 120px;
-        height: 120px;
-        border-radius: 60%;
-        margin-right: 40px;
-        border: ridge $text-color;
-        object-fit: cover;
-        object-position: right;
-        animation: scale-up-center 3s 1;
-    }
-}
-
-    &_navegacion {
-    li {
-        list-style: none;
-        display: inline-block;
-    }
-
-    &-texto {
-        display: block;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        animation: scale-up-center 3s 1;
-
-        &:hover {
-        border: 2px solid $text-color;
-        border-radius: 20px;
+        &-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 60%;
+            margin-right: 40px;
+            border: ridge $text-color;
+            object-fit: cover;
+            object-position: right;
+            animation: scale-up-center 3s 1;
         }
     }
+
+    &_navegacion {
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        &-texto {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            animation: scale-up-center 3s 1;
+
+            &:hover {
+                border: 2px solid $text-color;
+                border-radius: 20px;
+            }
+        }
     }
 }
 
 // Animaciones
 @keyframes scale-up-center {
     0% {
-    transform: scale(0.5);
+        transform: scale(0.5);
     }
     100% {
-    transform: scale(1);
+        transform: scale(1);
     }
 }
 

@@ -162,7 +162,8 @@ footer {
 .trabajo h3 {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 5px;
+  color: #ffffff;
+  margin-bottom: 0px;
 }
 .trabajo p {
   font-size: 14px;
@@ -174,7 +175,7 @@ footer {
 .trabajo ul li {
   list-style-type: none;
   font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 .trabajo:hover {
   transform: scale(1.02);
@@ -191,6 +192,63 @@ footer {
   border-radius: 60%;
   border: ridge #ffffff;
   margin-bottom: 5px;
+}
+
+.contacto-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.contacto-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.contacto-container .contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contacto-container .contacto-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.contacto-container .contacto-form .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.contacto-container .contacto-form .form-group input, .contacto-container .contacto-form .form-group textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+.contacto-container .contacto-form .form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.contacto-container .contacto-form .form-buttons input {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contacto-container .contacto-form .form-buttons input:first-child {
+  background-color: #007bff;
+  color: white;
+}
+.contacto-container .contacto-form .form-buttons input:first-child:hover {
+  background-color: #0056b3;
+}
+.contacto-container .contacto-form .form-buttons input:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+.contacto-container .contacto-form .form-buttons input:last-child:hover {
+  background-color: #b02a37;
 }
 
 /*# sourceMappingURL=style.css.map */
