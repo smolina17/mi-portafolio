@@ -1,12 +1,30 @@
-// Página específica: Index
+// Página específica: Index.html
+.main_presentacion {
+    p{
+        color: $secondary-text;
+    }
+}
+
 .main_tecnologias {
     display: flex;
     text-align: center;
 
     article {
         flex: 1;
-        margin: 10px;
+        margin: 20px;
         padding: 15px;
+        background-color: $bg-light;
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        p{
+            color: $secondary-text;
+        }
     }
 
     &-logo {
@@ -15,95 +33,84 @@
     }
 }
 
-// Responsive para móviles
-@media (max-width: 1024px) {
-    .header {
-        width: 100%;
-        height: 200px;
-        flex-direction: column;
-        padding-top: 20px;
+// Página específica: Escritura.html
+
+.articulo {
+    background-color: $bg-light;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
     }
 
-    .header_navegacion-texto,
-    .main_tecnologias-titulo {
-        @include text-title;
-        font-size: 18px;
+    .articulo-titulo {
+        color: $text-color;
+        @include text-subtitle;
     }
 
-    .header_navegacion ul {
-        width: 100%;
-        list-style: none;
-        display: flex;
-        padding: 10px;
-        height: max-content;
+    .articulo-fecha {
+        font-size: 12px;
+        color: $secondary-text;
+        margin-bottom: 10px;
     }
 
-    .main_tecnologias {
-        flex-direction: column;
+    .articulo-texto {
+        font-size: 16px;
+        color: $secondary-text;
+        line-height: 1.5;
+    }
 
-        article {
-            margin: 0;
-            padding: 0;
+    .articulo-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: $btn-primary;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            color: $btn-primary-hover;
         }
     }
 }
 
-// Página específica: Escritura
-.escrituraFecha {
-    text-align: initial;
-    font-size: 12px;
-}
-
-// Página específica: Perfil
+// Página específica: Perfil.html
 .sectionSobreMi {
     padding-top: 0px;
-    display: flex;
     text-align: center;
-
-    p,
-    .parrafoSobreMi {
-        padding-top: 20px;
-    }
-
-    .logoSobremi {
-        width: 300px;
-        height: 190px;
-    }
-}
-
-// 📌 Experiencia laboral
+    
 .experiencia {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     margin-top: 0px;
 }
 
 .trabajo {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: $bg-light;
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 
     h3 {
-        font-size: 22px;
-        font-weight: bold;
         color: $text-color;
         margin-bottom: 0px;
+        @include text-subtitle;
     }
 
-    p {
-        font-size: 14px;
+    p{
+        font-size: 12px;
         color: $secondary-text;
     }
 
     ul {
-        padding-left: 20px;
-
+        padding-left: 0px;
         li {
             list-style-type: none;
             font-size: 16px;
             margin-bottom: 0px;
+            color: $secondary-text;
         }
     }
 
@@ -111,10 +118,11 @@
         transform: scale(1.02);
     }
 }
+}
 
-// 📌 Logos en experiencia
 .trabajo-header {
     gap: 15px;
+    padding-top: 10px;
 }
 
 .trabajo-logo {
@@ -123,20 +131,25 @@
     object-fit: contain;
     border-radius: 60%;
     border: ridge $text-color;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-// 📌 Contacto
+// Página específica: contacto.html
 .contacto-container {
     max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    margin:  0px auto;
+    padding: 40px;
+    background-color: $bg-light;
     border-radius: 10px;
 
     h2 {
         text-align: center;
         margin-bottom: 15px;
+        @include text-title;
+    }
+
+    p{
+        color: $secondary-text;
     }
 
     .contacto-form {
@@ -195,4 +208,39 @@
     }
 }
 
+// Responsive para móviles
+@media (max-width: 1024px) {
+    .header {
+        width: 100%;
+        height: 200px;
+        flex-direction: column;
+        padding-top: 20px;
+    }
 
+    .header_navegacion-texto {
+        @include text-title;
+        font-size: 18px;
+    }
+
+    .main_tecnologias-titulo {
+        @include text-subtitle;
+    }
+
+    .header_navegacion ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        padding: 10px;
+        height: max-content;
+    }
+
+    .main_tecnologias {
+        flex-direction: column;
+
+        article {
+            margin: 10px;
+            padding: 0;
+            padding-top: 16px;
+        }
+    }
+}

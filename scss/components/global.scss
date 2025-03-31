@@ -3,6 +3,7 @@ $primary-color: #0E141B;
 $text-color: #ffffff;
 $secondary-text: #ccc;
 $border-color: rgba(255, 255, 255, 0.2);
+$bg-light: rgba(255, 255, 255, 0.05);
 
 // 🎨 Colores de botones
 $btn-primary: #007bff;
@@ -23,6 +24,13 @@ $font-family: "Montserrat", serif;
 @mixin text-title {
     color: $text-color;
     font-size: 28px;
+    font-family: $font-family;
+    font-weight: 600;
+}
+
+@mixin text-subtitle {
+    color: $text-color;
+    font-size: 22px;
     font-family: $font-family;
     font-weight: 600;
 }

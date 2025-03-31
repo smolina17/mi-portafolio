@@ -83,106 +83,115 @@ footer {
   text-align: center;
 }
 
+.main_presentacion p {
+  color: #ccc;
+}
+
 .main_tecnologias {
   display: flex;
   text-align: center;
 }
 .main_tecnologias article {
   flex: 1;
-  margin: 10px;
+  margin: 20px;
   padding: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+.main_tecnologias article:hover {
+  transform: scale(1.02);
+}
+.main_tecnologias article p {
+  color: #ccc;
 }
 .main_tecnologias-logo {
   width: 50px;
   height: 50px;
 }
 
-@media (max-width: 1024px) {
-  .header {
-    width: 100%;
-    height: 200px;
-    flex-direction: column;
-    padding-top: 20px;
-  }
-  .header_navegacion-texto,
-  .main_tecnologias-titulo {
-    color: #ffffff;
-    font-size: 28px;
-    font-family: "Montserrat", serif;
-    font-weight: 600;
-    font-size: 18px;
-  }
-  .header_navegacion ul {
-    width: 100%;
-    list-style: none;
-    display: flex;
-    padding: 10px;
-    height: max-content;
-  }
-  .main_tecnologias {
-    flex-direction: column;
-  }
-  .main_tecnologias article {
-    margin: 0;
-    padding: 0;
-  }
+.articulo {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
 }
-.escrituraFecha {
-  text-align: initial;
+.articulo:hover {
+  transform: scale(1.02);
+}
+.articulo .articulo-titulo {
+  color: #ffffff;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+}
+.articulo .articulo-fecha {
   font-size: 12px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+.articulo .articulo-texto {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.5;
+}
+.articulo .articulo-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.articulo .articulo-link:hover {
+  color: #0056b3;
 }
 
 .sectionSobreMi {
   padding-top: 0px;
-  display: flex;
   text-align: center;
 }
-.sectionSobreMi p,
-.sectionSobreMi .parrafoSobreMi {
-  padding-top: 20px;
-}
-.sectionSobreMi .logoSobremi {
-  width: 300px;
-  height: 190px;
-}
-
-.experiencia {
+.sectionSobreMi .experiencia {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   margin-top: 0px;
 }
-
-.trabajo {
-  background-color: rgba(255, 255, 255, 0.1);
+.sectionSobreMi .trabajo {
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
-.trabajo h3 {
-  font-size: 22px;
-  font-weight: bold;
+.sectionSobreMi .trabajo h3 {
   color: #ffffff;
   margin-bottom: 0px;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: "Montserrat", serif;
+  font-weight: 600;
 }
-.trabajo p {
-  font-size: 14px;
+.sectionSobreMi .trabajo p {
+  font-size: 12px;
   color: #ccc;
 }
-.trabajo ul {
-  padding-left: 20px;
+.sectionSobreMi .trabajo ul {
+  padding-left: 0px;
 }
-.trabajo ul li {
+.sectionSobreMi .trabajo ul li {
   list-style-type: none;
   font-size: 16px;
   margin-bottom: 0px;
+  color: #ccc;
 }
-.trabajo:hover {
+.sectionSobreMi .trabajo:hover {
   transform: scale(1.02);
 }
 
 .trabajo-header {
   gap: 15px;
+  padding-top: 10px;
 }
 
 .trabajo-logo {
@@ -191,19 +200,26 @@ footer {
   object-fit: contain;
   border-radius: 60%;
   border: ridge #ffffff;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .contacto-container {
   max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
 }
 .contacto-container h2 {
   text-align: center;
   margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 28px;
+  font-family: "Montserrat", serif;
+  font-weight: 600;
+}
+.contacto-container p {
+  color: #ccc;
 }
 .contacto-container .contacto-form {
   display: flex;
@@ -249,6 +265,43 @@ footer {
 }
 .contacto-container .contacto-form .form-buttons input:last-child:hover {
   background-color: #b02a37;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    width: 100%;
+    height: 200px;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .header_navegacion-texto {
+    color: #ffffff;
+    font-size: 28px;
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .main_tecnologias-titulo {
+    color: #ffffff;
+    font-size: 22px;
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+  }
+  .header_navegacion ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    height: max-content;
+  }
+  .main_tecnologias {
+    flex-direction: column;
+  }
+  .main_tecnologias article {
+    margin: 10px;
+    padding: 0;
+    padding-top: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
